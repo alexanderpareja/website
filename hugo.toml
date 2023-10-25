@@ -1,4 +1,4 @@
-baseURL = "https://alexpareja.com"
+baseURL = "https://main.d3grlyt1ut3ks8.amplifyapp.com/"
 title = "Alexander Pareja"
 theme = "etch-dracula"
 languageCode = "en-US"
@@ -8,7 +8,7 @@ pygmentsUseClasses = true
 
 [params]
   description = "---"
-  copyright = "Copyright © 2020 Your Name"
+  copyright = "No Copyright © 2077 Alexander Pareja"
   dark = "auto"
   highlight = true
 
