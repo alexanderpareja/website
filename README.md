@@ -1,4 +1,4 @@
-# Personal Blog
+![blog](https://socialify.git.ci/alexanderpareja/blog/image?description=1&font=Source%20Code%20Pro&language=1&name=1&owner=1&pattern=Solid&stargazers=1&theme=Dark)
 
 [![Built with Hugo](https://img.shields.io/badge/Built%20with-Hugo-%23FF4088)](https://gohugo.io/)
 [![Deployed with AWS Amplify](https://img.shields.io/badge/Deployed%20with-AWS%20Amplify-%2300AADD)](https://aws.amazon.com/amplify/)
