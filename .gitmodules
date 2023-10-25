@@ -1,0 +1,3 @@
+[submodule "themes/etch-dracula"]
+	path = themes/etch-dracula
+	url = https://github.com/alexanderpareja/etch-dracula.git
