@@ -5,7 +5,7 @@
 
 This repository contains the source code for my personal blog. Please note that this project is a work in progress and primarily serves as a learning journey for me.
 
-This blog is being created to share my insights, learnings, and other silly things. I'm using [Hugo](https://gohugo.io/) as the static site generator and [AWS Amplify](https://aws.amazon.com/amplify/) for deployment and hosting.
+This blog is being created to share my insights, learnings, and other things. I'm using [Hugo](https://gohugo.io/) as the static site generator, with a forked version of the Etch theme, and [AWS Amplify](https://aws.amazon.com/amplify/) for deployment and hosting.
 
 ## Project Status
 
