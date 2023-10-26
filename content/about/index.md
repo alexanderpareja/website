@@ -1,7 +1,7 @@
 +++
 title = 'About'
-date = 2023-10-26T03:12:44-04:00
-draft = true
+
+draft = false
 +++
 
 ## Tools

@@ -1,7 +1,7 @@
 +++
 title = 'Deploying on Amplify'
 date = 2023-10-26T02:32:28-04:00
-draft = true
+draft = false
 +++
 
 ![](/images/vampt_deployonaws.jpg)
