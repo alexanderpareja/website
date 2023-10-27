@@ -9,7 +9,7 @@ pygmentsUseClasses = true
 [params]
   description = "---"
   copyright = "No Copyright © 2077 Alexander Pareja"
-  dark = "auto"
+  dark = "on"
   highlight = true
 
 [menu]
