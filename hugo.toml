@@ -7,7 +7,7 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 
 [params]
-  description = "---"
+  description = "Technologist from the east coast."
   copyright = "No Copyright © 2077 Alexander Pareja"
   dark = "on"
   highlight = true
