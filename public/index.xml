@@ -2,12 +2,185 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alexander Pareja</title>
-    <link>https://alexpareja.com/</link>
+    <link>https://www.alexpareja.com/</link>
     <description>Recent content on Alexander Pareja</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
+    <lastBuildDate>Tue, 05 Dec 2023 03:50:39 -0500</lastBuildDate>
     
-	<atom:link href="https://alexpareja.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.alexpareja.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>I Joined Mastodon</title>
+      <link>https://www.alexpareja.com/i-joined-mastodon/</link>
+      <pubDate>Tue, 05 Dec 2023 03:50:39 -0500</pubDate>
+      
+      <guid>https://www.alexpareja.com/i-joined-mastodon/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://www.alexpareja.com/images/vampt_mechamastodon.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.shields.io/badge/-MASTODON-%232B90D9?style=for-the-badge&amp;amp;logo=mastodon&amp;amp;logoColor=white&#34; alt=&#34;Mastodon&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;why-i-joined-mastodon-a-breath-of-fresh-air&#34;&gt;Why I Joined Mastodon: A Breath of Fresh Air&lt;/h1&gt;
+&lt;p&gt;I found myself growing increasingly discontent with the state of social media platforms (So much so that I learned Hugo and started this blog). The once-familiar landscape had transformed into something different, and not necessarily in a positive way. That&amp;rsquo;s when I decided to join Mastodon, and I&amp;rsquo;m already enjoying the change. Here are the two main reasons that led me to make the switch:&lt;/p&gt;
+&lt;h2 id=&#34;1-escape-from-the-strange-vibes-on-the-bird-site&#34;&gt;1. Escape from the Strange Vibes on the Bird Site&lt;/h2&gt;
+&lt;p&gt;Twitter used to be a place of lively discussions and information sharing. However, something had changed. The platform had become inundated with strange ads and I often found myself constantly bombarded with questionable content designed to provoke anger and engagement.&lt;/p&gt;
+&lt;p&gt;This constant stream of negativity was taking a toll on my mental health. I longed for a more peaceful and focused online experience. Mastodon, with its decentralized nature and community-driven ethos, offered a refreshing alternative. (I have also been checking out nostr for some time, but thats another post.)&lt;/p&gt;
+&lt;h2 id=&#34;2-a-haven-for-linux-and-tech-enthusiasts&#34;&gt;2. A Haven for Linux and Tech Enthusiasts&lt;/h2&gt;
+&lt;p&gt;As a Linux and tech enthusiast, I was on the hunt for a platform where I could find like-minded individuals and engage in discussions related to my interests. Mastodon proved to be the perfect solution. Unlike other platforms, it doesn&amp;rsquo;t employ algorithms designed to incite anger or distraction. Instead, I can explore a wide array of Linux and tech-related content without being sidetracked by irrelevant posts.&lt;/p&gt;
+&lt;h3 id=&#34;my-mastodon-journey-so-far&#34;&gt;My Mastodon Journey So Far&lt;/h3&gt;
+&lt;p&gt;I&amp;rsquo;ve been thoroughly enjoying the discovery phase. If you&amp;rsquo;re interested in Linux, tech, or just want to be part of a more positive online community, feel free to &lt;a href=&#34;https://mastodon.social/@alexpareja&#34;&gt;follow me on Mastodon&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Package Conflict</title>
+      <link>https://www.alexpareja.com/package-conflict/</link>
+      <pubDate>Sat, 04 Nov 2023 19:34:59 -0400</pubDate>
+      
+      <guid>https://www.alexpareja.com/package-conflict/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://www.alexpareja.com/images/vampt_packageconflict.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;resolving-package-conflict-on-arch-linux&#34;&gt;Resolving Package Conflict on Arch Linux&lt;/h1&gt;
+&lt;p&gt;This will happen every once in while. I go to update my computer and I encounter a package conflict. This time for me it was a conflict between &lt;code&gt;jdk-openjdk&lt;/code&gt; and &lt;code&gt;jre-openjdk&lt;/code&gt;. I had find out what they&amp;rsquo;re for and get rid of one:&lt;/p&gt;
+&lt;h2 id=&#34;check-dependencies&#34;&gt;Check Dependencies:&lt;/h2&gt;
+&lt;p&gt;Run the following commands to check which packages depend on &lt;code&gt;jdk-openjdk&lt;/code&gt; and &lt;code&gt;jre-openjdk&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pacman -Qi jdk-openjdk&lt;/code&gt; and &lt;code&gt;pacman -Qi jre-openjdk&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This will provide information about the packages and their dependencies.&lt;/p&gt;
+&lt;p&gt;When I ran these commands i learned that &lt;code&gt;jre-openjdk&lt;/code&gt; has dependencies that I have installed; GTK2, GTK3, and alsa-lib (for audio).&lt;/p&gt;
+&lt;h2 id=&#34;decide-which-package-to-keep&#34;&gt;Decide Which Package to Keep:&lt;/h2&gt;
+&lt;p&gt;I chose the package that was essential for my system. Since I&amp;rsquo;m not using this machine for Java development, I&amp;rsquo;m removing &lt;code&gt;jdk-openjdk&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Typically, &lt;code&gt;jdk-openjdk&lt;/code&gt; is used for development, while &lt;code&gt;jre-openjdk&lt;/code&gt; is for running Java applications.&lt;/p&gt;
+&lt;h2 id=&#34;remove-or-replace-the-conflicting-package&#34;&gt;Remove or Replace the Conflicting Package:&lt;/h2&gt;
+&lt;p&gt;To remove a package, use &lt;code&gt;pacman -R package&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo pacman -R jdk-openjdk  # or jre-openjdk, depending on your choice&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;To replace it, install the other package: Don&amp;rsquo;t skip this part, it will update and fix the package you want to keep, so that its prepared for the system update. Depending on your system&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo pacman -S jre-openjdk  # if keeping jre-openjdk&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;update-your-system&#34;&gt;Update Your System:&lt;/h2&gt;
+&lt;p&gt;After resolving the conflict, update your system without issues:
+&lt;code&gt;sudo pacman -Syu&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;check-aur-packages-if-using-yay&#34;&gt;Check AUR Packages (if using yay):&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;yay -Syu&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If you use yay to manage AUR packages, also check for any AUR packages that depend on &lt;code&gt;jdk-openjdk&lt;/code&gt; or &lt;code&gt;jre-openjdk&lt;/code&gt;. You might need to update or rebuild them as well.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Git Submodules</title>
+      <link>https://www.alexpareja.com/git-submodules/</link>
+      <pubDate>Wed, 01 Nov 2023 05:04:17 -0400</pubDate>
+      
+      <guid>https://www.alexpareja.com/git-submodules/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://www.alexpareja.com/images/vampt_gitsubmodules.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;git-submodules&#34;&gt;Git Submodules&lt;/h1&gt;
+&lt;p&gt;When I tried a customized Hugo theme for my blog, I thought it would be mostly straightforward. But the challenges of Git submodules made themselves known.&lt;/p&gt;
+&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;
+&lt;h3 id=&#34;identifying-the-problem&#34;&gt;Identifying the Problem&lt;/h3&gt;
+&lt;p&gt;While using the Etch theme, I noticed the site description was conspicuously absent. I decided to get my hands dirty and modify the theme directly.&lt;/p&gt;
+&lt;h3 id=&#34;forking-and-modifying-the-theme&#34;&gt;Forking and Modifying the Theme&lt;/h3&gt;
+&lt;p&gt;I already forked my own repo of the Etch theme and made the necessary tweaks. Testing it locally, everything seemed perfect. However, when pushing the changes to Github, I ran into a new and unfamiliar problem.&lt;/p&gt;
+&lt;h3 id=&#34;git-submodules-101&#34;&gt;Git Submodules 101&lt;/h3&gt;
+&lt;p&gt;Git submodules are a method to house one Git repository inside another. They’re particularly handy for situations like this – where you want to include a theme or plugin within your project without melding the two histories.&lt;/p&gt;
+&lt;h2 id=&#34;the-missteps&#34;&gt;The Missteps&lt;/h2&gt;
+&lt;h3 id=&#34;submodule-detachment&#34;&gt;Submodule Detachment&lt;/h3&gt;
+&lt;p&gt;I quickly learned the consequences of direct modifications: my submodule detached itself from its source. What seemed like a tiny adjustment led to a confusing situation where my theme pointed to a non-existent link.&lt;/p&gt;
+&lt;h3 id=&#34;reconnecting-the-dots&#34;&gt;Reconnecting the Dots&lt;/h3&gt;
+&lt;p&gt;The real challenge was making sense of the detached submodule. The &lt;code&gt;.gitmodules&lt;/code&gt; file was useful, ensuring everything pointed to the right path, which it was not. Instead, it was pointing to a non-existent repo. I knew I just needed to start over.&lt;/p&gt;
+&lt;h2 id=&#34;the-solution&#34;&gt;The Solution&lt;/h2&gt;
+&lt;h3 id=&#34;using-git-force&#34;&gt;Using Git Force&lt;/h3&gt;
+&lt;p&gt;I was certain that the themes/etch-dracula directory was the correct repository and I simply wanted to update or reset it, so I turned to the &lt;code&gt;--force&lt;/code&gt; option. This powerful Git command allowed me to re-align my theme. However, a word of caution: it&amp;rsquo;s a tool that should be used with understanding and care. I exercised neither.&lt;/p&gt;
+&lt;h3 id=&#34;re-adding-the-submodule&#34;&gt;Re-adding the Submodule&lt;/h3&gt;
+&lt;p&gt;After some tinkering, I managed to re-add the submodule correctly. The key was pushing both my main repository and the submodule, ensuring they were synchronized and harmonious.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Dark Mode Only</title>
+      <link>https://www.alexpareja.com/dark-mode-only/</link>
+      <pubDate>Fri, 27 Oct 2023 03:08:47 -0400</pubDate>
+      
+      <guid>https://www.alexpareja.com/dark-mode-only/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://www.alexpareja.com/images/vampt_darkmodeonly.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://draculatheme.com/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Theme-Dracula-Theme?logo=g&amp;amp;labelColor=%236272A4&amp;amp;color=%23BD93F9%20&#34; alt=&#34;Static Badge&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;dark-mode-a-personal-take&#34;&gt;Dark Mode: A Personal Take&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;ve always been an advocate for dark mode across all platforms and applications. Beyond its sleek and modern aesthetic, there&amp;rsquo;s a genuine functional benefit to using dark mode, especially for those of us who spend hours on our screens.&lt;/p&gt;
+&lt;h2 id=&#34;aesthetic-appeal&#34;&gt;Aesthetic Appeal&lt;/h2&gt;
+&lt;p&gt;Dark mode isn&amp;rsquo;t just a trend. There&amp;rsquo;s something undeniably stylish about the contrast of light text on a dark background. It adds an air of sophistication and a modern touch to applications. The muted color palette often used in dark mode interfaces further enhances this effect, creating a cohesive and visually appealing design.&lt;/p&gt;
+&lt;h2 id=&#34;be-nice-to-your-eyes&#34;&gt;Be Nice to Your Eyes&lt;/h2&gt;
+&lt;p&gt;For someone like me, who spends a significant portion of the day staring at screens, this reduction in eye strain is a huge relief. The muted colors and reduced glare make reading and navigating content much more comfortable, especially in low-light environments or during late-night sessions.&lt;/p&gt;
+&lt;h2 id=&#34;why-my-blog-is-dark-mode-only&#34;&gt;Why My Blog is Dark Mode Only&lt;/h2&gt;
+&lt;p&gt;Given my personal preference and the aforementioned benefits, I&amp;rsquo;ve taken the decision to make my blog dark mode only. I believe it offers a better reading experience, and it aligns with my personal brand and design aesthetics.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In conclusion&lt;/strong&gt;, dark mode is more than just a design trend. It&amp;rsquo;s a conscious choice for better usability and aesthetics. As screens become an increasingly prominent part of our lives, it&amp;rsquo;s essential to make choices that prioritize our comfort.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Deploying on Amplify</title>
+      <link>https://www.alexpareja.com/deploying-on-amplify/</link>
+      <pubDate>Thu, 26 Oct 2023 02:32:28 -0400</pubDate>
+      
+      <guid>https://www.alexpareja.com/deploying-on-amplify/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://www.alexpareja.com/images/vampt_deployonaws.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Built%20with-Hugo-%23FF4088&#34; alt=&#34;Built with Hugo&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/amplify/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Deployed%20with-AWS%20Amplify-%2300AADD&#34; alt=&#34;Deployed with AWS Amplify&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;deploying-this-site-on-aws&#34;&gt;Deploying This Site on AWS&lt;/h1&gt;
+&lt;p&gt;My journey and the challenges I faced while deploying my blog using the Hugo framework on AWS Amplify.&lt;/p&gt;
+&lt;h2 id=&#34;the-dns-resolution&#34;&gt;The DNS Resolution&lt;/h2&gt;
+&lt;p&gt;While the process seemed straightforward initially, I ran into an unexpected issue: the CNAME records wouldn&amp;rsquo;t resolve. For those unfamiliar, CNAME records are for mapping custom domains to the provided AWS URL. I anxiously waited, tested, and retried, but it appeared stagnant.&lt;/p&gt;
+&lt;p&gt;Patience proved to be the remedy. Approximately 24 hours later, the domain started functioning as intended. This was a reminder that DNS resolutions aren&amp;rsquo;t always instantaneous and sometimes require a longer waiting period.&lt;/p&gt;
+&lt;h2 id=&#34;the-blank-screen&#34;&gt;The Blank Screen&lt;/h2&gt;
+&lt;p&gt;After overcoming the DNS resolution issue, a new problem presented itself. Upon visiting the provided AWS URL, all I was greeted with was a blank screen. No error messages, no content, just emptiness.&lt;/p&gt;
+&lt;p&gt;After some investigation, I found the problem in the Hugo configuration file. The &lt;code&gt;baseUrl&lt;/code&gt; parameter was pointing towards my custom URL, which at the time, had unresolved DNS records. By switching the &lt;code&gt;baseUrl&lt;/code&gt; to the AWS assigned URL temporarily, the site started deploying correctly.&lt;/p&gt;
+&lt;h2 id=&#34;wrapping-it-up&#34;&gt;Wrapping It Up&lt;/h2&gt;
+&lt;p&gt;After ensuring the site was deploying as intended, I waited for the DNS resolution to complete fully. Once it did, I switched the &lt;code&gt;baseUrl&lt;/code&gt; back to my custom domain.&lt;/p&gt;
+&lt;p&gt;A couple of valuable lessons in patience and the importance of double-checking configuration files.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Hello There</title>
+      <link>https://www.alexpareja.com/hello-there/</link>
+      <pubDate>Wed, 25 Oct 2023 03:30:04 -0400</pubDate>
+      
+      <guid>https://www.alexpareja.com/hello-there/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://www.alexpareja.com/images/firstpost.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;creating-my-hugo-blog-a-step-by-step-recap&#34;&gt;Creating My Hugo Blog: A Step-by-Step Recap&lt;/h1&gt;
+&lt;p&gt;Setting up a Hugo blog can be straightforward, but there are always little challenges along the way. Here&amp;rsquo;s a brief overview of the steps and hiccups I encountered while setting up mine.&lt;/p&gt;
+&lt;h2 id=&#34;1-forking--modifying-the-etch-theme&#34;&gt;1. &lt;strong&gt;Forking &amp;amp; Modifying the Etch Theme&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Before diving into the actual Hugo site setup, I started by forking the Etch theme for Hugo. Its a simple, easy to use theme, but I wanted to use the Dracula color theme with it. After making necessary modifications to the CSS files, I was ready to move on to the next step.&lt;/p&gt;
+&lt;h2 id=&#34;2-setting-up-the-hugo-site&#34;&gt;2. &lt;strong&gt;Setting up the Hugo Site&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;With the modified theme in hand, I initiated a new Hugo site using:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new site blog
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-adding-the-forked-theme&#34;&gt;3. &lt;strong&gt;Adding the Forked Theme&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;After creating the new site, I wanted to add my forked Etch theme. Using Git submodules seemed to be the right way to go, but I encountered an error:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fatal: not a git repository (or any of the parent directories): .git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This was because I forgot to run &amp;lsquo;git init&amp;rsquo; in the directory. I managed to resolve it and successfully added the theme to my site.&lt;/p&gt;
+&lt;h2 id=&#34;4-testing-the-site-locally&#34;&gt;4. &lt;strong&gt;Testing the Site Locally&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Once the theme was added, I ran Hugo&amp;rsquo;s built-in server to test the site:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I was pleased to see my changes were reflected correctly.&lt;/p&gt;
+&lt;h2 id=&#34;5-pushing-to-github&#34;&gt;5. &lt;strong&gt;Pushing to GitHub&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;With everything looking good locally, the next step was to push the new Hugo blog to my GitHub repository. But I ran into another hiccup:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;error: failed to push some refs to &amp;#39;https://github.com/alexanderpareja/blog.git&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Not really sure what happened here, but I updated the submodule and it worked.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git submodule init
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git submodule update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;6-adding-images-to-blog-posts&#34;&gt;6. &lt;strong&gt;Adding Images to Blog Posts&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;One last thing to figure out was the right way to add images in markdown for my blog posts. With Hugo, it&amp;rsquo;s pretty straightforward. The images can be stored in the &lt;code&gt;static&lt;/code&gt; directory, and then referenced in the markdown file.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;All in all, setting up a Hugo blog was an enlightening experience. With the challenges came learning, and now I have a personalized blog, ready to be filled with content.&lt;/p&gt;
+</description>
+    </item>
+    
+    
     
     
   </channel>
