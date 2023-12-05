@@ -2,10 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://alexpareja.com/</loc>
+    <loc>https://www.alexpareja.com/</loc>
+    <lastmod>2023-12-05T03:50:39-05:00</lastmod>
   </url><url>
-    <loc>https://alexpareja.com/categories/</loc>
+    <loc>https://www.alexpareja.com/i-joined-mastodon/</loc>
+    <lastmod>2023-12-05T03:50:39-05:00</lastmod>
   </url><url>
-    <loc>https://alexpareja.com/tags/</loc>
+    <loc>https://www.alexpareja.com/posts/</loc>
+    <lastmod>2023-12-05T03:50:39-05:00</lastmod>
+  </url><url>
+    <loc>https://www.alexpareja.com/package-conflict/</loc>
+    <lastmod>2023-11-04T19:34:59-04:00</lastmod>
+  </url><url>
+    <loc>https://www.alexpareja.com/git-submodules/</loc>
+    <lastmod>2023-11-01T05:04:17-04:00</lastmod>
+  </url><url>
+    <loc>https://www.alexpareja.com/dark-mode-only/</loc>
+    <lastmod>2023-10-27T03:08:47-04:00</lastmod>
+  </url><url>
+    <loc>https://www.alexpareja.com/deploying-on-amplify/</loc>
+    <lastmod>2023-10-26T02:32:28-04:00</lastmod>
+  </url><url>
+    <loc>https://www.alexpareja.com/hello-there/</loc>
+    <lastmod>2023-10-25T03:30:04-04:00</lastmod>
+  </url><url>
+    <loc>https://www.alexpareja.com/about/</loc>
+  </url><url>
+    <loc>https://www.alexpareja.com/categories/</loc>
+  </url><url>
+    <loc>https://www.alexpareja.com/tags/</loc>
   </url>
 </urlset>

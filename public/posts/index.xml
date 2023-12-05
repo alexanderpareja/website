@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Alexander Pareja</title>
-    <link>https://www.alexpareja.com/tags/</link>
-    <description>Recent content in Tags on Alexander Pareja</description>
+    <title>Posts on Alexander Pareja</title>
+    <link>https://www.alexpareja.com/posts/</link>
+    <description>Recent content in Posts on Alexander Pareja</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
+    <lastBuildDate>Tue, 05 Dec 2023 03:50:39 -0500</lastBuildDate>
     
-	<atom:link href="https://www.alexpareja.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.alexpareja.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     

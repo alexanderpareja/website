@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technologist from the east coast.">
+    
+    <link rel="shortcut icon" href="https://www.alexpareja.com/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="canonical" href="https://www.alexpareja.com/package-conflict/" />
+    <link rel="me" href="https://mastodon.social/@alexpareja" />
+    <title>Package Conflict</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://www.alexpareja.com">Alexander Pareja</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/" title="posts">posts</a>
+            </li><li>
+                <a href="/about/" title="about">about</a>
+            </li>
+        </ul>
+    </nav>
+    <p>Technologist from the east coast.</p>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Package Conflict</h1>
+        <div>
+                <time>November 4, 2023</time>
+            </div>
+    </header><p><img src="/images/vampt_packageconflict.png" alt=""></p>
+<h1 id="resolving-package-conflict-on-arch-linux">Resolving Package Conflict on Arch Linux</h1>
+<p>This will happen every once in while. I go to update my computer and I encounter a package conflict. This time for me it was a conflict between <code>jdk-openjdk</code> and <code>jre-openjdk</code>. I had find out what they&rsquo;re for and get rid of one:</p>
+<h2 id="check-dependencies">Check Dependencies:</h2>
+<p>Run the following commands to check which packages depend on <code>jdk-openjdk</code> and <code>jre-openjdk</code>:</p>
+<p><code>pacman -Qi jdk-openjdk</code> and <code>pacman -Qi jre-openjdk</code></p>
+<p>This will provide information about the packages and their dependencies.</p>
+<p>When I ran these commands i learned that <code>jre-openjdk</code> has dependencies that I have installed; GTK2, GTK3, and alsa-lib (for audio).</p>
+<h2 id="decide-which-package-to-keep">Decide Which Package to Keep:</h2>
+<p>I chose the package that was essential for my system. Since I&rsquo;m not using this machine for Java development, I&rsquo;m removing <code>jdk-openjdk</code>.</p>
+<p>Typically, <code>jdk-openjdk</code> is used for development, while <code>jre-openjdk</code> is for running Java applications.</p>
+<h2 id="remove-or-replace-the-conflicting-package">Remove or Replace the Conflicting Package:</h2>
+<p>To remove a package, use <code>pacman -R package</code>:</p>
+<p><code>sudo pacman -R jdk-openjdk  # or jre-openjdk, depending on your choice</code></p>
+<p>To replace it, install the other package: Don&rsquo;t skip this part, it will update and fix the package you want to keep, so that its prepared for the system update. Depending on your system</p>
+<p><code>sudo pacman -S jre-openjdk  # if keeping jre-openjdk</code></p>
+<h2 id="update-your-system">Update Your System:</h2>
+<p>After resolving the conflict, update your system without issues:
+<code>sudo pacman -Syu</code></p>
+<h3 id="check-aur-packages-if-using-yay">Check AUR Packages (if using yay):</h3>
+<p><code>yay -Syu</code></p>
+<p>If you use yay to manage AUR packages, also check for any AUR packages that depend on <code>jdk-openjdk</code> or <code>jre-openjdk</code>. You might need to update or rebuild them as well.</p>
+</article>
+
+        </main><footer id="footer">
+    No Copyright © 2077 Alexander Pareja
+</footer>
+</body>
+</html>

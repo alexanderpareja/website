@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technologist from the east coast.">
+    
+    <link rel="shortcut icon" href="https://www.alexpareja.com/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="canonical" href="https://www.alexpareja.com/hello-there/" />
+    <link rel="me" href="https://mastodon.social/@alexpareja" />
+    <title>Hello There</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://www.alexpareja.com">Alexander Pareja</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/" title="posts">posts</a>
+            </li><li>
+                <a href="/about/" title="about">about</a>
+            </li>
+        </ul>
+    </nav>
+    <p>Technologist from the east coast.</p>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Hello There</h1>
+        <div>
+                <time>October 25, 2023</time>
+            </div>
+    </header><p><img src="/images/firstpost.jpg" alt=""></p>
+<h1 id="creating-my-hugo-blog-a-step-by-step-recap">Creating My Hugo Blog: A Step-by-Step Recap</h1>
+<p>Setting up a Hugo blog can be straightforward, but there are always little challenges along the way. Here&rsquo;s a brief overview of the steps and hiccups I encountered while setting up mine.</p>
+<h2 id="1-forking--modifying-the-etch-theme">1. <strong>Forking &amp; Modifying the Etch Theme</strong></h2>
+<p>Before diving into the actual Hugo site setup, I started by forking the Etch theme for Hugo. Its a simple, easy to use theme, but I wanted to use the Dracula color theme with it. After making necessary modifications to the CSS files, I was ready to move on to the next step.</p>
+<h2 id="2-setting-up-the-hugo-site">2. <strong>Setting up the Hugo Site</strong></h2>
+<p>With the modified theme in hand, I initiated a new Hugo site using:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site blog
+</span></span></code></pre></div><h2 id="3-adding-the-forked-theme">3. <strong>Adding the Forked Theme</strong></h2>
+<p>After creating the new site, I wanted to add my forked Etch theme. Using Git submodules seemed to be the right way to go, but I encountered an error:</p>
+<pre tabindex="0"><code>fatal: not a git repository (or any of the parent directories): .git
+</code></pre><p>This was because I forgot to run &lsquo;git init&rsquo; in the directory. I managed to resolve it and successfully added the theme to my site.</p>
+<h2 id="4-testing-the-site-locally">4. <strong>Testing the Site Locally</strong></h2>
+<p>Once the theme was added, I ran Hugo&rsquo;s built-in server to test the site:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo server
+</span></span></code></pre></div><p>I was pleased to see my changes were reflected correctly.</p>
+<h2 id="5-pushing-to-github">5. <strong>Pushing to GitHub</strong></h2>
+<p>With everything looking good locally, the next step was to push the new Hugo blog to my GitHub repository. But I ran into another hiccup:</p>
+<pre tabindex="0"><code>error: failed to push some refs to &#39;https://github.com/alexanderpareja/blog.git&#39;
+</code></pre><p>Not really sure what happened here, but I updated the submodule and it worked.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule init
+</span></span><span class="line"><span class="cl">git submodule update
+</span></span></code></pre></div><h2 id="6-adding-images-to-blog-posts">6. <strong>Adding Images to Blog Posts</strong></h2>
+<p>One last thing to figure out was the right way to add images in markdown for my blog posts. With Hugo, it&rsquo;s pretty straightforward. The images can be stored in the <code>static</code> directory, and then referenced in the markdown file.</p>
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+<p>All in all, setting up a Hugo blog was an enlightening experience. With the challenges came learning, and now I have a personalized blog, ready to be filled with content.</p>
+</article>
+
+        </main><footer id="footer">
+    No Copyright © 2077 Alexander Pareja
+</footer>
+</body>
+</html>
