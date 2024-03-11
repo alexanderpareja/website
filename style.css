@@ -1,0 +1,95 @@
+/* Reset default browser styles */
+html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: monospace;
+    background-color: #0E0D11; /* Dracula background */
+    color: #f8f8f2; /* Dracula foreground */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+.header {
+    padding: 20px 0;
+}
+
+.header pre {
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav a {
+    color: #50fa7b; /* Dracula green */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #ff79c6; /* Dracula pink */
+}
+
+/* Main content styles */
+.main-content {
+    padding: 20px 0;
+}
+
+.main-content h2 {
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    margin-bottom: 20px;
+}
+
+/* Footer styles */
+.footer {
+    
+    color: #6272a4; /* Dracula comment */
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header pre {
+        font-size: 8px;
+    }
+
+    .nav li {
+        display: block;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav a {
+        display: block;
+    }
+}
+
